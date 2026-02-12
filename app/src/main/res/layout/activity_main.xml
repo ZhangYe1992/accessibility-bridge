@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alex Accessibility Bridge"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检查中..."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnEnableAccessibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 开启无障碍权限"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 启动HTTP服务"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="API端点:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET http://localhost:8080/ping - 健康检查\nGET http://localhost:8080/dump - 获取UI树\nGET http://localhost:8080/tap?x=540&y=1000 - 点击\nGET http://localhost:8080/swipe?x1=540&y1=800&x2=540&y2=1500 - 滑动\nGET http://localhost:8080/back - 返回\nGET http://localhost:8080/home - 主页\nGET http://localhost:8080/wake - 唤醒"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:lineSpacingMultiplier="1.2" />
+
+</LinearLayout>
