@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "33.0.0"
     
     defaultConfig {
         applicationId "com.alex.bridge"
@@ -17,8 +16,14 @@ android {
             minifyEnabled false
         }
     }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    // Empty - no external dependencies
+    // 使用本地jar，避免网络依赖
+    implementation files('libs/nanohttpd-2.3.1.jar')
 }
